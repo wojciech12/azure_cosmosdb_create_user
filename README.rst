@@ -1,7 +1,7 @@
-Create cosmosdb database and Corresponding User
+Create CosmosDB Database and Corresponding User
 -----------------------------------------------
 
-Script creates a database in cosmosdb container and a corresponding user. As output, it prints a temporary token for the user.
+Script creates a database in CosmosDB container and a corresponding user. As output, it prints a temporary token for the user.
 
 **Notice**: cosmosdb does not support users as you would expect in a database. You have to use your service keys (az cosmosdb get-keys --resource-group RESOURCE_GROUP --name COSMOSDB_CONTAINER) or temporary user/token. The temporary user/token will not work if you want to use the mongodb client.
 
@@ -15,6 +15,8 @@ Script creates a database in cosmosdb container and a corresponding user. As out
   export DB_NAME=
   
   python create_db_and_creds.py
+
+If you want to automatize CosmosDB, the best source are the tests for CosmosDB python client. You will find the links below.
 
 Reference
 ---------
